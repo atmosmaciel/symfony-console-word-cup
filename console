@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+
+<?php
+
+use Symfony\Component\Console\Application;
+use WordCup\Commands\MatchsCommands;
+use WordCup\Commands\TeamsCommands;
+
+require __DIR__ . '/bootstrap.php';
+
+$app = new Application();
+$app->add(new TeamsCommands());
+$app->add(new MatchsCommands());
+
+$app->run();
